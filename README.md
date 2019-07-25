@@ -24,6 +24,11 @@ Step 3. add These in app build.gradle
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+
+Step 4. delete cache in ActivityDestroy
+  
+    //包括裁剪和压缩后的缓存，要在上传成功后调用，注意：需要系统sd卡权限 
+    PictureFileUtils.deleteCacheDirFile(MainActivity.this);
    
    
 fast use
